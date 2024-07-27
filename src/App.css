@@ -1,0 +1,123 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+ */
+
+
+/* MY CSS */
+
+.in-f{
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: none;
+}
+/* App.css */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+pre {
+  white-space: pre-wrap; /* Wrap text within the pre element */
+  word-break: break-word; /* Break long words to prevent overflow */
+  color: white;
+  margin: 50px;
+  font-size: x-large;
+}
+
+.homepage {
+  position: relative;
+  overflow: hidden; /* Ensure no overflow from video */
+  min-height: 100vh; /* Minimum height to cover viewport */
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.homepage video{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+.nav-bar{
+  z-index: 1;
+
+}
+.footer{
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  bottom: 0;
+  margin-top: auto;
+
+}
+.c-p{
+  cursor: pointer;
+}
+
+.my-btn{
+    background-color: transparent;
+    border:2px solid white;
+    padding:20px 50px;
+    color:white;
+    font-weight:bold;
+    letter-spacing:5px;
+    cursor: pointer
+}
+
