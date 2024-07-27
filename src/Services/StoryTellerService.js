@@ -5,6 +5,23 @@ import {
   HumanMessagePromptTemplate,
 } from "@langchain/core/prompts";
 
+async function query(data) {
+  const hugging = import.meta.env.HUGGINGFACE_API_KEY
+	const response = await fetch(
+		"https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-3-medium-diffusers",
+		{
+			headers: {
+				Authorization: `Bearer ${hugging}`,
+				"Content-Type": "application/json",
+			},
+			method: "POST",
+			body: JSON.stringify(data),
+		}
+	);
+	const result = await response.blob();
+	return result;
+}
+
 export const StoryTellerService = async (inputValue) => {
   // console.log(inputValue);
   const SECRET_KEY = import.meta.env.VITE_GEMINI_API_KEY;
@@ -17,7 +34,7 @@ export const StoryTellerService = async (inputValue) => {
   );
 
   const humanMessagePrompt =
-    HumanMessagePromptTemplate.fromTemplate("{asked_story}");
+    HumanMessagePromptTemplate.fromTemplate(" Write a childrens story based on the topic '{asked_story}' make sure it kind of rhymes and has a lesson.");
 
   const chatPrompt = ChatPromptTemplate.fromMessages([
     systemMessagePrompt,
@@ -30,5 +47,21 @@ export const StoryTellerService = async (inputValue) => {
   // console.log("Formatted Chat Prompt: ", formattedChatPrompt);
   const response = await chat.invoke(formattedChatPrompt);
 
+  document.getElementById('generateButton').addEventListener('click', () => {
+    query({"inputs": response.content}).then((blob) => {
+        // Create an object URL from the blob
+        const objectURL = URL.createObjectURL(blob);
+
+        // Create an image element and set its source to the object URL
+        const img = document.createElement('img');
+        img.src = objectURL;
+        img.alt = "Generated Image";
+
+        // Clear any previous image and append the new image element to the DOM
+        const imageContainer = document.getElementById('imageContainer');
+        imageContainer.innerHTML = ''; // Clear previous image
+        imageContainer.appendChild(img);
+    });
+});
   return response.content;
 };

@@ -44,9 +44,10 @@ export default function StoryTeller() {
             alignItems: "center",
           }}
         >
-          <button className="my-btn">ASK</button>
+          <button className="my-btn" id="generateButton">ASK</button>
         </div>
       </form>
+      <div id="imageContainer"></div>
       <pre>{story}</pre>
     </div>
   );
