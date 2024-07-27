@@ -1,16 +1,19 @@
 import React from "react";
-import bg from "../Video/bg.mp4";
+// import bg from "../Video/bg.mp4";
 import Navbar from "./Navbar";
 import StoryTeller from "./StoryTeller";
 import Footer from "./Footer";
 import DesignSection from "./DesignSection";
+import { AnimatedBackground } from 'animated-backgrounds';
 
 export default function HomePage() {
   return (
     <div className="homepage">
-      <video loop muted autoPlay>
+      {/* <video loop muted autoPlay>
         <source src={bg} />
-      </video>
+      </video> */}
+            <AnimatedBackground animationName="starryNight" />
+
       <div className="nav-bar">
         <Navbar />
       </div>

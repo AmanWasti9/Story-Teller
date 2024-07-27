@@ -8,7 +8,7 @@ export default function Navbar() {
         textAlign: "center",
       }}
     >
-      <h1>Aman - The Story Teller</h1>
+      <h1>Narrify — Your Story Teller</h1>
       <hr />
       <ul
         style={{

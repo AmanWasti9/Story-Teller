@@ -72,6 +72,8 @@ pre {
   color: white;
   margin: 50px;
   font-size: x-large;
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  font-optical-sizing: auto;
 }
 
 .homepage {
@@ -116,6 +118,8 @@ pre {
   letter-spacing: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  font-optical-sizing: auto;
 }
 
 .my-btn:hover {

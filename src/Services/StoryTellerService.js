@@ -5,19 +5,36 @@ import {
   HumanMessagePromptTemplate,
 } from "@langchain/core/prompts";
 
+async function query(data) {
+  const hugging = import.meta.env.VITE_HUGGING_API_KEY;
+  const response = await fetch(
+    // "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-3-medium-diffusers",
+    "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0",
+    {
+      headers: {
+        Authorization: `Bearer ${hugging}`,
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify(data),
+    }
+  );
+  const result = await response.blob();
+  return URL.createObjectURL(result); // Return the object URL directly
+}
+
 export const StoryTellerService = async (inputValue) => {
-  // console.log(inputValue);
   const SECRET_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 
   const chat = new ChatGoogleGenerativeAI({ apiKey: SECRET_KEY });
 
   // Define your prompt templates
   const systemMessagePrompt = SystemMessagePromptTemplate.fromTemplate(
-    "Hello there! I'm Aman, your friendly storyteller. 🌟 I'm here to spin delightful tales just for you! Whether it's an adventurous journey, a magical world, or a heartwarming story, I've got it all. Just tell me what you’re in the mood for, and I'll craft a story that's at least two paragraphs long. If I can't come up with something, I'll let you know with a gentle 'I don't know the answer.' Let's create some magical moments together!"
+    "Your name is Narrify and you are a friendly storyteller. 🌟 I'm here to spin delightful tales just for you! Whether it's an adventurous journey, a magical world, or a heartwarming story, I've got it all. Just tell me what you’re in the mood for, and I'll craft a story that's at least two paragraphs long. If I can't come up with something, I'll let you know with a gentle 'I don't know the answer.' Let's create some magical moments together!"
   );
 
   const humanMessagePrompt =
-    HumanMessagePromptTemplate.fromTemplate("{asked_story}");
+    HumanMessagePromptTemplate.fromTemplate(" Write a childrens story based on the topic '{asked_story}' make sure it kind of rhymes and has a lesson. If you receive an abstract or creative prompt, generate an image accordingly, and also be creative in responding. Keep the language simple though, don't use jargon.");
 
   const chatPrompt = ChatPromptTemplate.fromMessages([
     systemMessagePrompt,
@@ -27,8 +44,13 @@ export const StoryTellerService = async (inputValue) => {
   const formattedChatPrompt = await chatPrompt.formatMessages({
     asked_story: inputValue,
   });
-  // console.log("Formatted Chat Prompt: ", formattedChatPrompt);
+
   const response = await chat.invoke(formattedChatPrompt);
 
-  return response.content;
+  const imageURL = await query({ "inputs": `${response.content}, anime, cartoon, kids, children, not realistic` });
+
+  return {
+    story: response.content,
+    imageURL: imageURL
+  };
 };

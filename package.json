@@ -12,6 +12,7 @@
   "dependencies": {
     "@langchain/google-genai": "^0.0.23",
     "@langchain/openai": "^0.2.5",
+    "animated-backgrounds": "^1.0.1",
     "aos": "^2.3.4",
     "langchain": "^0.2.11",
     "react": "^18.3.1",
