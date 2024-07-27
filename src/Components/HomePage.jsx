@@ -27,6 +27,7 @@ export default function HomePage() {
       <div className="footer">
         <Footer />
       </div>
+      <br />
     </div>
   );
 }

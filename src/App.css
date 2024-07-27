@@ -56,7 +56,7 @@
 }
 /* App.css */
 body {
-  margin: 0;
+  margin: 0 30px;
   padding: 0;
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
@@ -99,9 +99,6 @@ pre {
 }
 .footer{
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 1;
   bottom: 0;
   margin-top: auto;
@@ -110,16 +107,22 @@ pre {
 .c-p{
   cursor: pointer;
 }
-
-.my-btn{
-    background-color: transparent;
-    border:2px solid white;
-    padding:20px 50px;
-    color:white;
-    font-weight:bold;
-    letter-spacing:5px;
-    cursor: pointer
+.my-btn {
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 20px 50px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+.my-btn:hover {
+  background-color: white;
+  color: black;
+}
+
 
 .design_main{
   display: flex;
@@ -136,7 +139,9 @@ pre {
   align-items: center;
 }
 .design_div_1 img{
+  margin-top: 10px;
   width: 90%;
+  border-radius: 10px;
 }
 @media screen and (max-width: 767px) {
   .design_main{

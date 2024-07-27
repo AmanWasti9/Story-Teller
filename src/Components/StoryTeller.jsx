@@ -18,6 +18,7 @@ export default function StoryTeller() {
 
   return (
     <div
+      id="askstory"
       className="container"
       style={{
         display: "flex",
@@ -28,7 +29,15 @@ export default function StoryTeller() {
     >
       {/* Apply the container class */}
       <h1>Ask your Story</h1>
-      <form onSubmit={handleStoryClick}>
+      <form
+        onSubmit={handleStoryClick}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+        }}
+      >
         <input
           type="text"
           value={inputValue}
@@ -37,13 +46,7 @@ export default function StoryTeller() {
           className="in-f"
         />
         <br />
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
+        <div>
           <button className="my-btn">ASK</button>
         </div>
       </form>
