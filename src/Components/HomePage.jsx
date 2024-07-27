@@ -3,6 +3,7 @@ import bg from "../Video/bg.mp4";
 import Navbar from "./Navbar";
 import StoryTeller from "./StoryTeller";
 import Footer from "./Footer";
+import DesignSection from "./DesignSection";
 
 export default function HomePage() {
   return (
@@ -18,6 +19,11 @@ export default function HomePage() {
       <div className="nav-bar">
         <StoryTeller />
       </div>
+      <div>
+        <DesignSection />
+      </div>
+      <br />
+      <br />
       <div className="footer">
         <Footer />
       </div>

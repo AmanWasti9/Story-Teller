@@ -121,3 +121,30 @@ pre {
     cursor: pointer
 }
 
+.design_main{
+  display: flex;
+  flex-direction: row;
+  width:'100%';
+  justify-content: center;
+  align-items: center;
+}
+.design_div_1,.design_div_2{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.design_div_1 img{
+  width: 90%;
+}
+@media screen and (max-width: 767px) {
+  .design_main{
+    display: flex;
+    flex-direction: column;
+  }
+  .design_div_1,.design_div_2{
+    width: 100%;
+  }
+
+}
