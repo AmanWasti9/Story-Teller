@@ -6,6 +6,7 @@ export default function Footer() {
     <div id="contact">
       <hr />
       <br />
+<<<<<<< HEAD
       <div
         style={{
           display: "flex",
@@ -69,6 +70,17 @@ export default function Footer() {
             </li>
           </ul>
         </div>
+=======
+      <div style={{
+        display: 'flex',
+        justifyContent:'center',
+        alignItems:'center'
+      }}>
+      Made by Amanullah | Ahmed | Asfandyar
+      <br />
+      amawasti5@gmail.com | mirzasfand04@gmail.com | ahmedbashaar974@gmail.com
+
+>>>>>>> origin/master
       </div>
     </div>
   );
