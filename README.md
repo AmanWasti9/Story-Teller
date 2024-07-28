@@ -43,6 +43,8 @@ npm install
 ```bash
 npm run dev
 ```
+## If the app stops responding, that might be due to the API key limit. Since this is for testing only, we're working on limited hits, but will accommodate for this in future
+
 ## Contributing
 We welcome contributions to improve Narrify! If you would like to contribute:
 
