@@ -1,30 +1,3 @@
-// import React from "react";
-// import s3 from '../Images/s3.png';
-
-// export default function Hero() {
-//   return (
-//     <div className="hero_main">
-//       <div className="hero_1">
-//       <p style={{
-//         fontSize: "larger",
-//         wordSpacing:'0.5em',
-//         textAlign:'justify',
-//         lineHeight:'2em'
-//       }}>
-//         Are you tired of telling the same old stories to your kids? Children’s
-//         curiosity is boundless, and they constantly seek new and exciting
-//         adventures. To make storytelling fresh and engaging, we introduce 
-//         <strong> Narrify</strong>—the perfect solution to keep their imaginations sparked and
-//         their hearts entertained.
-//       </p>
-//       </div>
-//       <div className="hero_2">
-//         <img src={s3} alt="" />
-//       </div>
-//     </div>
-//   );
-// }
-
 import React, { useState, useEffect } from "react";
 import s2 from '../Images/s2.jpg';
 import s3 from '../Images/s3.png';
