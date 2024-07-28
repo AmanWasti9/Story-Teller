@@ -6,28 +6,22 @@ export default function Footer() {
     <div id="contact">
       <hr />
       <br />
-<<<<<<< HEAD
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
         <div className="Footer__1_list">
           <ul className="list-none margin-0 padding-0 flex-row gap-30" style={{
             listStyle: "none",
             margin: "0",
-            padding:'0',
-            display:'flex',
-            flexDirection:'row',
-            gap:'50px'
+            padding: '0',
+            display: 'flex',
+            flexDirection: 'row',
+            gap: '50px'
           }}>
             <li>
               <a
-                title="linkedIn"
+                title="LinkedIn"
                 target="_blank"
                 href="https://www.linkedin.com/in/aman-wasti/"
+                rel="noopener noreferrer"
               >
                 <img
                   alt="LinkedIn"
@@ -43,6 +37,7 @@ export default function Footer() {
                 title="LinkedIn"
                 target="_blank"
                 href="https://www.linkedin.com/in/ahmed-bashaar-200197225/"
+                rel="noopener noreferrer"
               >
                 <img
                   alt="LinkedIn"
@@ -58,6 +53,7 @@ export default function Footer() {
                 title="LinkedIn"
                 target="_blank"
                 href="https://www.linkedin.com/in/mirza-asfandyar-baig-44abb6218/"
+                rel="noopener noreferrer"
               >
                 <img
                   alt="LinkedIn"
@@ -70,17 +66,11 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-=======
-      <div style={{
-        display: 'flex',
-        justifyContent:'center',
-        alignItems:'center'
-      }}>
-      Made by Amanullah | Ahmed | Asfandyar
-      <br />
-      amawasti5@gmail.com | mirzasfand04@gmail.com | ahmedbashaar974@gmail.com
-
->>>>>>> origin/master
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', marginTop: '10px' }}>
+        Made by Amanullah | Ahmed | Asfandyar
+        <br />
+        amawasti5@gmail.com | mirzasfand04@gmail.com | ahmedbashaar974@gmail.com
       </div>
     </div>
   );

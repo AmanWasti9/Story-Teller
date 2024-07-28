@@ -2,8 +2,9 @@ import { useEffect } from 'react';
 import './App.css';
 import HomePage from './Components/HomePage';
 // import StoryTeller from './Components/StoryTeller';
-import AOS from "aos";
 import "aos/dist/aos.css";
+import AOS from "aos";
+
 
 function App() {
   useEffect(() => {
