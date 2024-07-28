@@ -12,7 +12,7 @@ export default function Footer() {
       }}>
       Made by Amanullah | Ahmed | Asfandyar
       <br />
-      amawasti5@gmail.com | 03360348013
+      amawasti5@gmail.com | mirzasfand04@gmail.com | ahmedbashaar974@gmail.com
 
       </div>
     </div>
