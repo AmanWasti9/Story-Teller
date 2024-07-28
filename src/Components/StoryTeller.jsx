@@ -130,6 +130,7 @@ export default function StoryTeller() {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        margin:'20px'
       }}
     >
       <h1>Ask your Story</h1>
