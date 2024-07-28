@@ -68,7 +68,9 @@ export default function Footer() {
         </div>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', marginTop: '10px' }}>
-        Made by Amanullah | Ahmed | Asfandyar
+        <span style={{textAlign: 'center'}}>
+        Made by Team A^3
+        </span>
         <br />
         amawasti5@gmail.com | mirzasfand04@gmail.com | ahmedbashaar974@gmail.com
       </div>
